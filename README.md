@@ -38,9 +38,9 @@ The LiteJob class in Elastic Job is the handle, and will be the one of the param
 
 The Facede pattern is applied to simpliy the usage of distributed Quartz. 
 
-<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516160717.png" width="80%"/></div>
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516160717.png" width="70%"/></div>
 
-<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/1621153120(1).png" width="80%"/></div>
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/1621153120(1).png" width="60%"/></div>
 
 
 ### 3. Apply Elastic job in Springboot
@@ -109,6 +109,6 @@ Elastic-Job support cron expression as well. Please notice the whole setting wil
 **Step4: Ac-hoc Job (Optional)**
 You can define more than one OneOffJobBootstrap obj in your controller and open via Restful API.
 
-<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516165039.png" width="80%"/></div>
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516165039.png" width="60%"/></div>
 
 ***This is the end, cheer up!***
