@@ -102,7 +102,7 @@ use the ***mod*** function in your RDBMS (like MySQL) to divide your task in sev
 **Step3: Configure in the .yml**
 Figure out the place of zookeeper and also declare your job.
 
-<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516163358.png" width="80%"/></div>
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516163358.png" width="60%"/></div>
 
 Elastic-Job support cron expression as well. Please notice the whole setting will be cached in Zookeeper once your instance is up, and it is also hard to flush. If you have this issue when you want to test your cron config, you can try to use change ***namespace*** under the reg-center.
 
@@ -110,5 +110,12 @@ Elastic-Job support cron expression as well. Please notice the whole setting wil
 You can define more than one OneOffJobBootstrap obj in your controller and open via Restful API.
 
 <div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516165039.png" width="60%"/></div>
+
+### Reference
+
+ 1. https://shardingsphere.apache.org/elasticjob/current/cn/overview/
+ 2.  https://www.iocoder.cn/categories/Elastic-Job-Lite/?self
+ 3. https://github.com/apache/shardingsphere-elasticjob/blob/d374fad51ca49bf93516a7bde31c60fe37149703/docs/content/user-manual/elasticjob-lite/usage/job-api/spring-boot-starter.cn.md
+ 4.  https://yeasy.gitbook.io/docker_practice/network/linking
 
 ***This is the end, cheer up!***
