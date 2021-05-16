@@ -14,7 +14,7 @@
 It is the originator of scheduling job, and has been used as the core in the following frameworks, most of them manage to simplify the usage of Quartz in the context of distributed cluster.
 
 **Four main components:**
-![](https://raw.githubusercontent.com/saLeox/photoHub/main/1621145334(1).jpg)
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/1621145334(1).jpg" width="60%"/></div>
 
 - **Scheduler**: A registry where to register jobdetails and triggers.
 -  **Trigger**: Defines when to invoke job.
@@ -29,7 +29,7 @@ It is the originator of scheduling job, and has been used as the core in the fol
  - There is a listener inside each shard, will ping to Zookeeper to acquire
    the lock and also gain the sharding index or parameters.
 
-![](https://raw.githubusercontent.com/saLeox/photoHub/main/20210516155500.png)
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516155500.png" width="80%"/></div>
 
 **How the Elastic Job build on the yop of Quartz**
 The LiteJob class in Elastic Job is the handle, and will be the one of the parameter to build the JobDeatil in Quartz, since it  implements the Job interface in Quartz.
@@ -38,9 +38,10 @@ The LiteJob class in Elastic Job is the handle, and will be the one of the param
 
 The Facede pattern is applied to simpliy the usage of distributed Quartz. 
 
-![](https://raw.githubusercontent.com/saLeox/photoHub/main/20210516160717.png)
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516160717.png" width="80%"/></div>
 
-![](https://raw.githubusercontent.com/saLeox/photoHub/main/1621153120(1).png)
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/1621153120(1).png" width="80%"/></div>
+
 
 ### 3. Apply Elastic job in Springboot
 **Step0: Run your Zookeeper in Docker**
@@ -95,17 +96,19 @@ Please notice the version of curator, which is the high level API of Zookeeper. 
 
 One ***suggestion*** here: 
 use the ***mod*** function in your RDBMS (like MySQL) to divide your task in several pieces.
- ![](https://raw.githubusercontent.com/saLeox/photoHub/main/20210516164320.png)
+
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516164320.png" width="70%"/></div>
 
 **Step3: Configure in the .yml**
 Figure out the place of zookeeper and also declare your job.
-![](https://raw.githubusercontent.com/saLeox/photoHub/main/20210516163358.png)
+
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516163358.png" width="80%"/></div>
 
 Elastic-Job support cron expression as well. Please notice the whole setting will be cached in Zookeeper once your instance is up, and it is also hard to flush. If you have this issue when you want to test your cron config, you can try to use change ***namespace*** under the reg-center.
 
 **Step4: Ac-hoc Job (Optional)**
 You can define more than one OneOffJobBootstrap obj in your controller and open via Restful API.
-![](https://raw.githubusercontent.com/saLeox/photoHub/main/20210516165039.png)
 
+<div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516165039.png" width="80%"/></div>
 
 ***This is the end, cheer up!***
