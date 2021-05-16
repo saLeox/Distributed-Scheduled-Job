@@ -61,7 +61,7 @@ But need to ensure other applications are under same network or there is a link 
 		    <version>3.0.0-RC1</version>
 		</dependency>
 
-Please notice the version of curator, which is the high level API of Zookeeper. To make it align with v3.x elastic-job, the version should be over 5.x.
+Please notice the version of curator, which is the high level API of Zookeeper. To make it align with v3.x elastic-job, the version of curator should be over 5.x. And the version of Zookeeper should be also higher than 3.5.x.
 
 	<dependencyManagement>
 		<dependencies>
