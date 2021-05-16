@@ -107,6 +107,7 @@ Figure out the place of zookeeper and also declare your job.
 Elastic-Job support cron expression as well. Please notice the whole setting will be cached in Zookeeper once your instance is up, and it is also hard to flush. If you have this issue when you want to test your cron config, you can try to use change ***namespace*** under the reg-center.
 
 **Step4: Ac-hoc Job (Optional)**
+
 You can define more than one OneOffJobBootstrap obj in your controller and open via Restful API.
 
 <div align=center><img src="https://raw.githubusercontent.com/saLeox/photoHub/main/20210516165039.png" width="60%"/></div>
